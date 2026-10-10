@@ -1,0 +1,29 @@
+name: Template structure validation
+
+on:
+  push:
+    paths:
+      - "README.md"
+      - "PROJECT.md"
+      - "AGENTS.md"
+      - "scripts/validate_template.py"
+      - ".github/**"
+  pull_request:
+    paths:
+      - "README.md"
+      - "PROJECT.md"
+      - "AGENTS.md"
+      - "scripts/validate_template.py"
+      - ".github/**"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate baseline files
+        run: python3 scripts/validate_template.py

@@ -1,0 +1,27 @@
+name: Bug
+description: Report reproducible behavior and supporting evidence.
+title: "[Bug] "
+body:
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happened, and where? Do not paste secrets.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction and evidence
+      description: Steps, environment, commit, sanitized logs or screenshots.
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact and recovery
+      description: Frequency, severity, workaround, affected users or data.

@@ -1,0 +1,23 @@
+name: Feature
+description: A scoped feature or improvement with observable acceptance criteria.
+title: "[Feature] "
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: Describe the user-facing or operational result.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Verifiable conditions for done.
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints and risks
+      description: Dependencies, compatibility, rollout, and what is out of scope.
