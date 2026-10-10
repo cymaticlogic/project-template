@@ -1,0 +1,14 @@
+# Operating-system/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local secrets and generated files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+__pycache__/
+*.pyc
